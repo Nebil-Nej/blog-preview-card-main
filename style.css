@@ -1,0 +1,134 @@
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+    --Black-light: hsla(0, 0%, 7%, 0.8);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Figtree", sans-serif;
+}
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Yellow);
+}
+
+.container {
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border: solid 1px var(--Black);
+    background-color: var(--White);
+    border-radius: 20px;
+    box-shadow: 5px 5px var(--Black);
+    transition: box-shadow 0.5s ease-in;
+}
+
+.container:hover {
+    box-shadow: 10px 10px var(--Black);
+    transition: box-shadow 0.5s ease-in;
+}
+
+.image-container {
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.container h6 {
+    text-align: center;
+    margin: 10px 0 10px;
+    padding: 5px 10px;
+    background-color: var(--Yellow);
+    border-radius: 5px;
+    width: fit-content;
+    font-weight: 900;
+}
+
+p {
+    font-size: 12px;
+    margin: 15px 0;
+    color: var(--Grey);
+}
+
+span {
+    font-size: 10px;
+    color: var(--Black-light);
+}
+
+.container h3 {
+    margin: 12px 0;
+    transition: color 0.5s ease-in;
+}
+
+.container h3:hover {
+    color: var(--Yellow);
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.creator-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(./assets/images/image-avatar.webp);
+    background-size: cover;
+}
+
+.creator-section h6 {
+    background-color: var(--White);
+    margin-left: 2px;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 300px;
+        min-width: 250px;
+    }
+
+    .container h6 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 720px) {
+    .container {
+        max-width: 40vw;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
